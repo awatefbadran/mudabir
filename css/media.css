@@ -1,53 +1,162 @@
-@media screen and (max-width: 909px) {
-    .main {
-        margin: auto;
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 768px) {
+
+    .box1{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;
     }
 
-    .main-parent {
-         grid-template-columns: repeat(1, 1fr);
-        grid-template-areas:
-            "box1"
-            "box2"
-            "box3"
-            "box4"
-            "box5"
-            "box6"
-            "box7"
-            "box8"
-            "box9"
-            "box10"
-            "box11"
-        ;
-
-    }
- .main {
-      margin-right: 0;
-      padding: 0;
-  }
-    .sidbar {
-        display: none;
+    .box1-left{
+        order:1;
+        width:100%;
     }
 
-    .sm-100 {
-        width: 100%;
+    .box1-right{
+        order:2;
+        width:100%;
+        justify-content: space-between;
     }
+
+ .online{
+    order: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #e5f3ea;
+    padding: 6px 12px;
+    border-radius: 10px;
+    width: 90%;
 }
 
-@media screen and (min-width: 910px) and (max-width: 1024px) {
-    .main-parent {
-         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "box1 box1 box1 box1 box1 box1"
-            " box2 box2 box3 box3 box4 box4"
-            "box5 box5  box5 box7 box7 box7 "
-            "box6 box6 box6 box6 box6 box6"
-            "box8 box8  box8 box10 box10 box10"
-            "box9 box9 box9 box11 box11 box11"
-
-        ;
-
+   
+    .titles{
+        display:none;
     }
- 
-    
+
+body{
+    display:block;
+}
+
+.sidbar{
+    display:none;
+}
+
+.main{
+    margin:0;
+    padding:10px;
+}
+
+.main-parent{
+    grid-template-columns:1fr;
+    grid-template-areas:
+    "box1"
+    "box2"
+    "box3"
+    "box4"
+    "box5"
+    "box6"
+    "box7"
+    "box8"
+    "box9"
+    "box10"
+    "box11";
+}
+
+
+
+.transactions-box{
+    overflow-x:auto;
+}
+
+.transactions-table{
+    min-width:650px;
+}
+
+
+.card1{
+    width:100%;
+    max-width:320px;
+    margin:15px auto;
+}
+
+/* bills */
+
+.box7-grid{
+    flex-direction:column;
+    gap:15px;
+}
+
+
+.box9-bars{
+    gap:10px;
+}
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media screen and (min-width:769px) and (max-width:1024px){
+
+.sidbar{
+    width:200px;
+}
+
+.main{
+    margin-right:200px;
+    padding:20px;
+}
+
+.main-parent{
+
+grid-template-columns:repeat(6,1fr);
+
+grid-template-areas:
+
+"box1 box1 box1 box1 box1 box1"
+
+"box2 box2 box3 box3 box4 box4"
+
+"box5 box5 box5 box7 box7 box7"
+
+"box6 box6 box6 box6 box6 box6"
+
+"box8 box8 box8 box10 box10 box10"
+
+"box9 box9 box9 box11 box11 box11";
+
+}
+
+/* table */
+
+.transactions-box{
+overflow-x:auto;
+}
+
+.transactions-table{
+min-width:700px;
+}
+
+.card1{
+margin:15px auto;
+}
+
+}
+
+
+/* ================= SMALL LAPTOP ================= */
+
+@media screen and (min-width:1025px) and (max-width:1300px){
+
+.main-parent{
+grid-template-columns:repeat(9,1fr);
+}
+
+.card1{
+width:240px;
+height:150px;
+}
 
 }
